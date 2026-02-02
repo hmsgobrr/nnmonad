@@ -14,14 +14,14 @@ onEvent :: Event -> World -> World
 onEvent _ w = w
 
 step :: Float -> World -> World
-step dt w = World (fontSc w + dt*0.5)
+step dt w = World { fontSc = fontSc w + dt * 0.5 }
 
 main :: IO ()
 main = play
     (InWindow "emnist yeyey" (400, 400) (10, 10))
     white
     30 -- fps
-    (World 0)
+    (World { fontSc = 0 })
     render
     onEvent
     step
