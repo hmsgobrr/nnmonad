@@ -1,8 +1,9 @@
 # nnmonad
-haskel yey
+haskell yey
 
-## Downloading assets
-Download mnist dataset from [kaggle](https://www.kaggle.com/api/v1/datasets/download/hojjatk/mnist-dataset)
+## Preparing
+### MNIST dataset
+Download MNIST dataset from [kaggle](https://www.kaggle.com/api/v1/datasets/download/hojjatk/mnist-dataset)
 ```
 curl -L -o ./mnist.zip https://www.kaggle.com/api/v1/datasets/download/hojjatk/mnist-dataset
 ```
@@ -18,3 +19,9 @@ train-labels-idx1-ubyte.gz: training set labels
 t10k-images-idx3-ubyte.gz: test set images 
 t10k-labels-idx1-ubyte.gz: test set labels
 ```
+### Required Packages
+To run in Debian (same as my machine) at least GLUT is needed:
+```
+sudo apt install freeglut3-dev
+```
+(other packages maybe required)
